@@ -1,0 +1,5 @@
+context vendas {
+  entity vendacab {
+    key id: String(10);
+  };
+};

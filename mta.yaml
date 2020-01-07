@@ -1,0 +1,39 @@
+ID: TutorialXXX
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: tutorialxxxdb
+   type: hdb
+   path: tutorialxxxdb
+   requires:
+    - name: hdi_tutorialxxxdb
+
+
+ 
+
+
+ - name: tutorialxxxweb
+   type: html5
+   path: tutorialxxxweb
+
+
+ 
+
+
+ 
+
+
+ - name: tutorialxxxjs
+   type: nodejs
+   path: tutorialxxxjs
+   provides:
+    - name: tutorialxxxjs_api
+      properties:
+         url: ${default-url}
+
+resources:
+ - name: hdi_tutorialxxxdb
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
