@@ -14,4 +14,12 @@ context vendas {
             valor       : Decimal(13, 2);
             curr        : String(5);
     };
+
+    view vendatotal as
+        select from vendaitem
+        {
+            id.id as id,
+            sum(valor) as valortotal
+        } group by id.id
+        order by id.id;
 };
