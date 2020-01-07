@@ -1,1 +1,16 @@
-<html> <body> Tutorial XXX! </body> </html>
+    <!DOCTYPE HTML><head><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>TutorialXXX</title>
+    <script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+    id="sap-ui-bootstrap" data-sap-ui-libs="sap.m, sap.ui.table" data-sap-ui-theme="sap_bluecrystal">
+    </script>
+    <script>
+      var oModel = new sap.ui.model.odata.ODataModel("/cabecalhototal.xsodata", true);
+      var oTable = new sap.ui.table.Table({ title: "Total por venda e cliente" });
+      oTable.addColumn(new sap.ui.table.Column({ label: "Venda", template: "id" }));
+      oTable.addColumn(new sap.ui.table.Column({ label: "Cliente", template: "cliente" }));
+      oTable.addColumn(new sap.ui.table.Column({ label: "Valor Total", template: "valortotal" }));
+      oTable.setModel(oModel); oTable.bindRows("/CabecalhoTotal"); oTable.placeAt("content");
+    </script>
+    </head>
+      <body class="sapUiBody"> <div id="content"></div> </body>
+    </html>

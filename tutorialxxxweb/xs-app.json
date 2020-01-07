@@ -1,5 +1,9 @@
 {
 	"welcomeFile": "index.html",
 	"authenticationMethod": "none",
-	"routes": []
+	"routes": [
+		{
+			"source": "^/cabecalhototal.xsodata/.*$",
+			"destination": "tutorialxxx-backend"}	
+	]
 }

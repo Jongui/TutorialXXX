@@ -9,10 +9,6 @@ modules:
    requires:
     - name: hdi_tutorialxxxdb
 
- - name: tutorialxxxweb
-   type: html5
-   path: tutorialxxxweb
-
  - name: tutorialxxxjs
    type: nodejs
    path: tutorialxxxjs
@@ -23,6 +19,16 @@ modules:
     - name: tutorialxxxjs_api
       properties:
          url: ${default-url}
+
+ - name: tutorialxxxweb
+   type: html5
+   path: tutorialxxxweb
+   requires:
+    - name: tutorialxxxjs_api
+      group: destinations
+      properties:
+        name: tutorialxxx-backend
+        url: ~{url}
 
 resources:
  - name: hdi_tutorialxxxdb
