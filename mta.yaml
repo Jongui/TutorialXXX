@@ -9,24 +9,16 @@ modules:
    requires:
     - name: hdi_tutorialxxxdb
 
-
- 
-
-
  - name: tutorialxxxweb
    type: html5
    path: tutorialxxxweb
 
-
- 
-
-
- 
-
-
  - name: tutorialxxxjs
    type: nodejs
    path: tutorialxxxjs
+   requires:
+    - name: tutorialxxxdb
+    - name: hdi_tutorialxxxdb
    provides:
     - name: tutorialxxxjs_api
       properties:
