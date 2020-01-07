@@ -1,0 +1,51 @@
+{
+    "format_version": 1,
+    "imports": [
+        {
+            "target_table": "vendas.vendacab",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "Cabecalho.csv",
+                "has_header": false
+            },
+            "import_settings": {
+                "import_columns": [
+                    "id",
+					"datacriacao",
+					"cliente"
+                ]
+	        },
+			"column_mappings": {
+				"id": 1,
+				"datacriacao": 2,
+				"cliente": 3
+			}
+        },
+        {
+            "target_table": "vendas.vendaitem",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "Itens.csv",
+                "has_header": false
+            },
+            "import_settings": {
+                "import_columns": [
+                    "id.id",
+					"material",
+					"quantidade",
+					"unid_medida",
+					"valor",
+					"curr"
+                ]
+            },
+			"column_mappings": {
+				"id.id": 1,
+				"material": 2,
+				"quantidade": 3,
+				"unid_medida": 4,
+				"valor": 5,
+				"curr": 6
+			}
+        }
+    ]
+}
