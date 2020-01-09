@@ -1,0 +1,14 @@
+PROCEDURE "criarOrdem"( 
+	IN  im_datacriacao NVARCHAR(10),
+        im_cliente NVARCHAR(45),
+    OUT ex_error NVARCHAR(10)
+) 
+  LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   AS
+BEGIN
+  select "ordemId".NEXTVAL into ex_error from dummy;
+  SELECT ABAP_NUMC(ex_error, 10) into ex_error FROM DUMMY;
+  insert into "vendas.vendacab"
+    values (ex_error, im_datacriacao, im_cliente); 
+END
