@@ -3,7 +3,9 @@ context vendas {
         key id          : String(10);
             datacriacao : LocalDate;
             cliente     : String(45);
-    };
+    } technical configuration {
+		row store;
+	};
 
     /*@@layout{"layoutInfo":{"external":[{"id":"vendacab","sourceName":"id","x":-135.01953125,"y":58},{"id":"vendacab","sourceName":"material","x":-135.01953125,"y":58},{"id":"vendacab","sourceName":"quantidade","x":-135.01953125,"y":58},{"id":"vendacab","sourceName":"unid_medida","x":-135.01953125,"y":58},{"id":"vendacab","sourceName":"valor","x":-135.01953125,"y":58},{"id":"vendacab","sourceName":"curr","x":-135.01953125,"y":58}]}}*/
     entity vendaitem {

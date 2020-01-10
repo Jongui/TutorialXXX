@@ -1,0 +1,6 @@
+service{
+	"vendas.vendacab"
+		as "VendaCab"
+	create using "xsjs:vendasCreateMethod.xsjslib::vendasCreate"
+	events( before "xsjs:vendasCreateMethod.xsjslib::vendasCreateBefore");
+}

@@ -1,0 +1,13 @@
+PROCEDURE "criar_ordem"( 
+	IN  im_id nvarchar(10),
+		im_datacriacao NVARCHAR(10),
+        im_cliente NVARCHAR(45)
+) 
+  LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   AS
+BEGIN
+  insert into "vendas.vendacab"
+    values (im_id, im_datacriacao, im_cliente); 
+  commit;
+END
